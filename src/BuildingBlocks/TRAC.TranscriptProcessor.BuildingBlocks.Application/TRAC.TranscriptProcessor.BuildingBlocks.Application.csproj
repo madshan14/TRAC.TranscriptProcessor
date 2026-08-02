@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Abstractions\Authentication\" />
+    <Folder Include="Abstractions\Storage\" />
+    <Folder Include="Abstractions\Persistence\" />
     <Folder Include="Behaviors\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Messaging\" />
-    <Folder Include="Results\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TRAC.TranscriptProcessor.BuildingBlocks.Domain\TRAC.TranscriptProcessor.BuildingBlocks.Domain.csproj" />
   </ItemGroup>
 
 </Project>
