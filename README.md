@@ -1,136 +1,203 @@
 # TRAC.TranscriptProcessor
 
-TRAC.TranscriptProcessor is the enterprise-grade modernization and architectural reconstruction of the original ImageToTOR application.
+TRAC.TranscriptProcessor is an enterprise-grade modernization of the legacy **ImageToTOR** application.
 
-The project is being rebuilt using:
+Rather than porting the original codebase, this project preserves the legacy application's business capabilities while redesigning the entire system using modern software architecture principles.
 
-- Modular Monolith
-- Clean Architecture
-- CQRS
-- Vertical Slice Architecture
-- ASP.NET Core
-- Entity Framework Core
+## Architecture
 
-The goal is to preserve the original application's business capabilities while improving:
+The solution is built using:
 
-- Maintainability
-- Scalability
-- Testability
-- Deployment flexibility
-- Domain separation
-- Long-term extensibility
+* Modular Monolith
+* Clean Architecture
+* Vertical Slice Architecture
+* CQRS (Command Query Responsibility Segregation)
+* Domain-Driven Design (DDD)
+* ASP.NET Core
+* Entity Framework Core
+* JWT Authentication & Authorization (planned)
 
+## Project Goals
 
-## Project Status
+The primary objectives of this project are to:
 
-🚧 Under Development
+* Modernize the legacy ImageToTOR application.
+* Improve maintainability, scalability, and testability.
+* Establish clear module boundaries.
+* Separate business logic from infrastructure concerns.
+* Introduce enterprise-grade authentication and authorization.
+* Create a foundation that can evolve into microservices if needed.
 
-## Reconstruction Progress
+The legacy application serves as the source of business requirements—not the architectural blueprint.
 
-The project is being rebuilt incrementally from the original ImageToTOR implementation.
+---
 
-| Phase | Description | Status |
-|---|---|---|
-| Phase 00 | Project Planning | ✅ Completed |
-| Phase 01 | Repository Foundation | ✅ Completed |
-| Phase 02 | Solution Structure & Architecture Enforcement | ✅ Completed |
-| Phase 03 | Shared Building Blocks | Planned |
-| Phase 04 | Identity Module | Planned |
-| Phase 05 | Images Module | Planned |
-| Phase 06 | Transcript Module | Planned |
-| Phase 07 | Processing Module | Planned |
+# Current Architecture
 
-
-# Phase 02 - Solution Structure & Architecture Enforcement
-
-## Objective
-
-Establish the foundation required to rebuild ImageToTOR using a clean enterprise architecture.
-
-## Completed Work
-
-### Modular Monolith Structure
-
-Created independent business modules:
-
-- Identity
-- Images
-- Transcript
-- Processing
-
-
-Each module follows:
-
-Module
+```text
+src
 │
-├── Domain
-├── Application
-├── Infrastructure
-└── Presentation
+├── Api
+│
+├── Worker
+│
+├── BuildingBlocks
+│   ├── TRAC.TranscriptProcessor.BuildingBlocks.Domain
+│   ├── TRAC.TranscriptProcessor.BuildingBlocks.Application
+│   └── TRAC.TranscriptProcessor.BuildingBlocks.Infrastructure
+│
+└── Modules
+    ├── Identity
+    │   ├── Domain
+    │   ├── Application
+    │   ├── Infrastructure
+    │   └── Presentation
+    │
+    ├── Images
+    ├── Transcript
+    └── Processing
+```
 
+Every business module follows the same layered architecture.
 
+---
 
-## Architecture Rules
+# Dependency Direction
 
-Implemented automated architecture validation using:
+The solution enforces the following dependency flow:
 
-- xUnit
-- NetArchTest.Rules
-
-
-The following dependency rules are enforced:
-
+```text
 Presentation
-|
-v
+      │
+      ▼
 Application
-|
-v
+      │
+      ▼
 Domain
 
 Infrastructure
-|
-v
+      │
+      ▼
 Application
-|
-v
+      │
+      ▼
 Domain
+```
 
+The Domain layer has no dependencies on higher layers, ensuring that business rules remain independent of frameworks and external technologies.
 
+---
 
-Forbidden dependencies:
-Domain
-❌ Application
-❌ Infrastructure
-❌ Presentation
+# Project Status
 
-Application
-❌ Infrastructure
-❌ Presentation
+| Phase    | Description                       |  Status |
+| -------- | --------------------------------- | :-----: |
+| Phase 00 | Project Planning                  |    ✅    |
+| Phase 01 | Repository Foundation             |    ✅    |
+| Phase 02 | Solution Structure & Architecture |    ✅    |
+| Phase 03 | Shared Building Blocks            |    ✅    |
+| Phase 04 | Identity Module                   | 🚧 Next |
 
-Infrastructure
-❌ Presentation
+---
 
+# Completed Work
 
-## Deliverables Completed
+## Phase 00 – Project Planning
 
-✅ Solution structure  
-✅ Modular boundaries  
-✅ Clean Architecture layers  
-✅ API entry point  
-✅ Worker entry point  
-✅ Docker foundation  
-✅ Architecture test project  
-✅ Dependency rule enforcement  
+* Defined project vision.
+* Selected architectural patterns.
+* Planned development roadmap.
 
+## Phase 01 – Repository Foundation
 
-## Next Phase
+* Created repository structure.
+* Added engineering documentation.
+* Established development standards.
+* Organized solution layout.
 
-Phase 03 will introduce shared building blocks required by all modules:
+## Phase 02 – Solution Structure & Architecture
 
-- Domain primitives
-- Result pattern
-- Error handling
-- Base entities
-- Shared abstractions
-- Common contracts
+* Created Modular Monolith solution.
+* Established module boundaries.
+* Implemented Clean Architecture layers.
+* Added API and Worker hosts.
+* Added architecture validation tests.
+* Enforced dependency rules.
+
+## Phase 03 – Shared Building Blocks
+
+Established the shared architectural foundation used by every module.
+
+### Domain
+
+* Entity
+* AggregateRoot
+* ValueObject
+* Domain Events
+* Domain Exceptions
+
+### Application
+
+* CQRS contracts
+* Result pattern
+* Error abstraction
+* Time abstraction
+
+### Infrastructure
+
+* Shared dependency injection
+* SystemDateTimeProvider
+* Common infrastructure conventions
+
+### Engineering
+
+* Centralized build configuration using `Directory.Build.props`
+* Nullable reference types enabled
+* Warnings treated as errors
+* Shared global usings
+* Architecture tests extended to BuildingBlocks
+
+---
+
+# What's Next
+
+## Phase 04 – Identity Module
+
+The next milestone introduces enterprise-grade authentication and authorization.
+
+Planned features include:
+
+* ASP.NET Core Identity
+* JWT Access Tokens
+* Refresh Tokens
+* User Management
+* Role Management
+* Permission-based Authorization
+* Login
+* Registration
+* Password Reset
+* Authentication Endpoints
+
+The Identity module will become the security foundation for the entire application.
+
+---
+
+# Development Principles
+
+Throughout this project we follow these principles:
+
+* Build from the inside out (Domain → Application → Infrastructure → Presentation)
+* Keep modules independent
+* Prefer composition over coupling
+* Keep business logic framework-agnostic
+* Write architecture tests to enforce design decisions
+* Make small, incremental, production-quality changes
+* Preserve business behavior while improving architecture
+
+---
+
+# Legacy Application
+
+The original **ImageToTOR** application is used solely as the reference implementation for business behavior.
+
+Business requirements will be extracted and redesigned to fit the new architecture rather than copied directly into the new solution.
