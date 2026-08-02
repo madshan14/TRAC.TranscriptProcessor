@@ -8,8 +8,10 @@
     <File Path="CODING_STANDARDS.md" />
     <File Path="DEPENDENCY-RULES.md" />
     <File Path="FEATURE-TEMPLATE.md" />
+    <File Path="GIT-WORKFLOW.md" />
     <File Path="MODULE-TEMPLATE.md" />
     <File Path="ROADMAP.md" />
+    <File Path="TECH-STACK.md" />
   </Folder>
   <Folder Name="/samples/" />
   <Folder Name="/src/" />
