@@ -1,1 +1,18 @@
-<Solution />
+<Solution>
+  <Folder Name="/build/" />
+  <Folder Name="/docs/" />
+  <Folder Name="/engineering/">
+    <File Path="ADR.md" />
+    <File Path="AI_CONTEXT.md" />
+    <File Path="ARCHITECTURE.md" />
+    <File Path="CODING_STANDARDS.md" />
+    <File Path="DEPENDENCY-RULES.md" />
+    <File Path="FEATURE-TEMPLATE.md" />
+    <File Path="MODULE-TEMPLATE.md" />
+    <File Path="ROADMAP.md" />
+  </Folder>
+  <Folder Name="/samples/" />
+  <Folder Name="/src/" />
+  <Folder Name="/tests/" />
+  <Folder Name="/tools/" />
+</Solution>
