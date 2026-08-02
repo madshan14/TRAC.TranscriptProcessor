@@ -14,6 +14,9 @@
     <File Path="TECH-STACK.md" />
   </Folder>
   <Folder Name="/samples/" />
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/TRAC.TranscriptProcessor.Api/TRAC.TranscriptProcessor.Api.csproj" />
     <Project Path="src/TRAC.TranscriptProcessor.Worker/TRAC.TranscriptProcessor.Worker.csproj" />
