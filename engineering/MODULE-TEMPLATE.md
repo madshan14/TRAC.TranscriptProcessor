@@ -4,8 +4,7 @@ Each business module follows this structure:
 
 Module
 │
-├── Contracts
-├── Domain
+├──Domain
 ├── Application
 ├── Infrastructure
 └── Presentation
