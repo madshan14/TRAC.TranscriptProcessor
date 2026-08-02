@@ -1,0 +1,6 @@
+@TRAC.TranscriptProcessor.Api_HostAddress = http://localhost:5219
+
+GET {{TRAC.TranscriptProcessor.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

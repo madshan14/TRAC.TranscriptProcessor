@@ -14,7 +14,42 @@
     <File Path="TECH-STACK.md" />
   </Folder>
   <Folder Name="/samples/" />
-  <Folder Name="/src/" />
-  <Folder Name="/tests/" />
+  <Folder Name="/src/">
+    <Project Path="src/TRAC.TranscriptProcessor.Api/TRAC.TranscriptProcessor.Api.csproj" />
+    <Project Path="src/TRAC.TranscriptProcessor.Worker/TRAC.TranscriptProcessor.Worker.csproj" />
+  </Folder>
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/TRAC.TranscriptProcessor.BuildingBlocks.Application/TRAC.TranscriptProcessor.BuildingBlocks.Application.csproj" />
+    <Project Path="src/BuildingBlocks/TRAC.TranscriptProcessor.BuildingBlocks.Domain/TRAC.TranscriptProcessor.BuildingBlocks.Domain.csproj" />
+    <Project Path="src/BuildingBlocks/TRAC.TranscriptProcessor.BuildingBlocks.Infrastructure/TRAC.TranscriptProcessor.BuildingBlocks.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Identity/">
+    <Project Path="src/Modules/Identity/TRAC.TranscriptProcessor.Modules.Identity.Application/TRAC.TranscriptProcessor.Modules.Identity.Application.csproj" />
+    <Project Path="src/Modules/Identity/TRAC.TranscriptProcessor.Modules.Identity.Domain/TRAC.TranscriptProcessor.Modules.Identity.Domain.csproj" />
+    <Project Path="src/Modules/Identity/TRAC.TranscriptProcessor.Modules.Identity.Infrastructure/TRAC.TranscriptProcessor.Modules.Identity.Infrastructure.csproj" />
+    <Project Path="src/Modules/Identity/TRAC.TranscriptProcessor.Modules.Identity.Presentation/TRAC.TranscriptProcessor.Modules.Identity.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Images/">
+    <Project Path="src/Modules/Images/TRAC.TranscriptProcessor.Modules.Images.Application/TRAC.TranscriptProcessor.Modules.Images.Application.csproj" />
+    <Project Path="src/Modules/Images/TRAC.TranscriptProcessor.Modules.Images.Domain/TRAC.TranscriptProcessor.Modules.Images.Domain.csproj" />
+    <Project Path="src/Modules/Images/TRAC.TranscriptProcessor.Modules.Images.Infrastructure/TRAC.TranscriptProcessor.Modules.Images.Infrastructure.csproj" />
+    <Project Path="src/Modules/Images/TRAC.TranscriptProcessor.Modules.Images.Presentation/TRAC.TranscriptProcessor.Modules.Images.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Processing/">
+    <Project Path="src/Modules/Processing/TRAC.TranscriptProcessor.Modules.Processing.Application/TRAC.TranscriptProcessor.Modules.Processing.Application.csproj" />
+    <Project Path="src/Modules/Processing/TRAC.TranscriptProcessor.Modules.Processing.Domain/TRAC.TranscriptProcessor.Modules.Processing.Domain.csproj" />
+    <Project Path="src/Modules/Processing/TRAC.TranscriptProcessor.Modules.Processing.Infrastructure/TRAC.TranscriptProcessor.Modules.Processing.Infrastructure.csproj" />
+    <Project Path="src/Modules/Processing/TRAC.TranscriptProcessor.Modules.Processing.Presentation/TRAC.TranscriptProcessor.Modules.Processing.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Transcript/">
+    <Project Path="src/Modules/Transcript/TRAC.TranscriptProcessor.Modules.Transcript.Application/TRAC.TranscriptProcessor.Modules.Transcript.Application.csproj" />
+    <Project Path="src/Modules/Transcript/TRAC.TranscriptProcessor.Modules.Transcript.Domain/TRAC.TranscriptProcessor.Modules.Transcript.Domain.csproj" />
+    <Project Path="src/Modules/Transcript/TRAC.TranscriptProcessor.Modules.Transcript.Infrastructure/TRAC.TranscriptProcessor.Modules.Transcript.Infrastructure.csproj" />
+    <Project Path="src/Modules/Transcript/TRAC.TranscriptProcessor.Modules.Transcript.Presentation/TRAC.TranscriptProcessor.Modules.Transcript.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Architecture.Tests/Architecture.Tests.csproj" Id="19965069-f41a-4d62-ad9e-b740c0465e06" />
+  </Folder>
   <Folder Name="/tools/" />
 </Solution>

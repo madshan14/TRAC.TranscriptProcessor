@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="NetArchTest.Rules" Version="1.3.2" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Modules\Identity\TRAC.TranscriptProcessor.Modules.Identity.Application\TRAC.TranscriptProcessor.Modules.Identity.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Identity\TRAC.TranscriptProcessor.Modules.Identity.Domain\TRAC.TranscriptProcessor.Modules.Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Identity\TRAC.TranscriptProcessor.Modules.Identity.Infrastructure\TRAC.TranscriptProcessor.Modules.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Identity\TRAC.TranscriptProcessor.Modules.Identity.Presentation\TRAC.TranscriptProcessor.Modules.Identity.Presentation.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Images\TRAC.TranscriptProcessor.Modules.Images.Application\TRAC.TranscriptProcessor.Modules.Images.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Images\TRAC.TranscriptProcessor.Modules.Images.Domain\TRAC.TranscriptProcessor.Modules.Images.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Images\TRAC.TranscriptProcessor.Modules.Images.Infrastructure\TRAC.TranscriptProcessor.Modules.Images.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Images\TRAC.TranscriptProcessor.Modules.Images.Presentation\TRAC.TranscriptProcessor.Modules.Images.Presentation.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Processing\TRAC.TranscriptProcessor.Modules.Processing.Application\TRAC.TranscriptProcessor.Modules.Processing.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Processing\TRAC.TranscriptProcessor.Modules.Processing.Domain\TRAC.TranscriptProcessor.Modules.Processing.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Processing\TRAC.TranscriptProcessor.Modules.Processing.Infrastructure\TRAC.TranscriptProcessor.Modules.Processing.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Processing\TRAC.TranscriptProcessor.Modules.Processing.Presentation\TRAC.TranscriptProcessor.Modules.Processing.Presentation.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Transcript\TRAC.TranscriptProcessor.Modules.Transcript.Application\TRAC.TranscriptProcessor.Modules.Transcript.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Transcript\TRAC.TranscriptProcessor.Modules.Transcript.Domain\TRAC.TranscriptProcessor.Modules.Transcript.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Transcript\TRAC.TranscriptProcessor.Modules.Transcript.Infrastructure\TRAC.TranscriptProcessor.Modules.Transcript.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Transcript\TRAC.TranscriptProcessor.Modules.Transcript.Presentation\TRAC.TranscriptProcessor.Modules.Transcript.Presentation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+</Project>
