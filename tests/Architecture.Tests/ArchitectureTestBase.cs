@@ -60,4 +60,42 @@ public static class ArchitectureTestBase
 
         Assert.True(result.IsSuccessful);
     }
+
+
+    public static void BuildingBlocks_Should_Not_Depend_On_Modules(
+        System.Reflection.Assembly assembly)
+    {
+        var result = Types
+            .InAssembly(assembly)
+            .ShouldNot()
+            .HaveDependencyOn(
+                "TRAC.TranscriptProcessor.Modules")
+            .GetResult();
+
+        Assert.True(result.IsSuccessful);
+    }
+
+
+    public static void BuildingBlocks_Domain_Should_Follow_Rules(
+        System.Reflection.Assembly assembly)
+    {
+        Domain_Should_Not_Have_Invalid_Dependencies(assembly);
+        BuildingBlocks_Should_Not_Depend_On_Modules(assembly);
+    }
+
+
+    public static void BuildingBlocks_Application_Should_Follow_Rules(
+        System.Reflection.Assembly assembly)
+    {
+        Application_Should_Not_Depend_On_Infrastructure(assembly);
+        BuildingBlocks_Should_Not_Depend_On_Modules(assembly);
+    }
+
+
+    public static void BuildingBlocks_Infrastructure_Should_Follow_Rules(
+        System.Reflection.Assembly assembly)
+    {
+        Infrastructure_Should_Not_Depend_On_Presentation(assembly);
+        BuildingBlocks_Should_Not_Depend_On_Modules(assembly);
+    }
 }

@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\TRAC.TranscriptProcessor.BuildingBlocks.Infrastructure\TRAC.TranscriptProcessor.BuildingBlocks.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\Identity\TRAC.TranscriptProcessor.Modules.Identity.Presentation\TRAC.TranscriptProcessor.Modules.Identity.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Images\TRAC.TranscriptProcessor.Modules.Images.Presentation\TRAC.TranscriptProcessor.Modules.Images.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Processing\TRAC.TranscriptProcessor.Modules.Processing.Presentation\TRAC.TranscriptProcessor.Modules.Processing.Presentation.csproj" />
